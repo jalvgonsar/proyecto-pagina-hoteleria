@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarifas y precios — Marina Vista Hotel & Spa</title>
+    <meta
+      name="description"
+      content="Precios de habitaciones, packs, spa, restauración y extras en Marina Vista. Temporadas y políticas de cancelación."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+              sans: ['Outfit', 'system-ui', 'sans-serif'],
+            },
+            colors: {
+              sand: {
+                50: '#faf8f5',
+                100: '#f3efe8',
+                200: '#e6ddd0',
+              },
+              ink: {
+                900: '#1a1814',
+                700: '#3d3830',
+              },
+              accent: {
+                DEFAULT: '#b8860b',
+                light: '#d4a84b',
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-sans text-ink-700 bg-sand-50 antialiased">
+    <header
+      class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-ink-900/90 backdrop-blur-md"
+    >
+      <nav
+        class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+        aria-label="Principal"
+      >
+        <a href="index.html" class="font-display text-2xl font-semibold tracking-wide text-white sm:text-3xl">
+          Marina <span class="text-accent-light">Vista</span>
+        </a>
+        <div class="hidden items-center gap-8 md:flex">
+          <a href="index.html#habitaciones" class="text-sm font-medium text-white/80 transition hover:text-white"
+            >Habitaciones</a
+          >
+          <a href="servicios.html" class="text-sm font-medium text-white/80 transition hover:text-white">Servicios</a>
+          <a href="precios.html" class="text-sm font-medium text-accent-light" aria-current="page">Precios</a>
+          <a href="index.html#contacto" class="text-sm font-medium text-white/80 transition hover:text-white"
+            >Contacto</a
+          >
+        </div>
+        <a
+          href="index.html#reserva"
+          class="rounded-full bg-accent px-5 py-2 text-sm font-medium text-ink-900 transition hover:bg-accent-light"
+        >
+          Reservar
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="relative overflow-hidden bg-ink-900 pt-28 pb-16 text-white sm:pt-32 sm:pb-20">
+        <img
+          src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1920&q=80"
+          alt=""
+          class="absolute inset-0 h-full w-full object-cover opacity-25"
+          width="1920"
+          height="1080"
+          aria-hidden="true"
+        />
+        <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p class="text-sm font-medium uppercase tracking-[0.25em] text-accent-light">Tarifas 2026</p>
+          <h1 class="font-display mt-3 max-w-3xl text-5xl font-semibold sm:text-6xl">Precios detallados</h1>
+          <p class="mt-6 max-w-2xl text-lg text-white/80">
+            Tarifas por persona y noche en régimen de alojamiento y desayuno (ADR), salvo indicación contraria. IVA
+            incluido. Suplementos y packs opcionales.
+          </p>
+        </div>
+      </section>
+
+      <!-- Leyenda temporadas -->
+      <section class="border-b border-sand-200 bg-sand-100 py-8">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 class="text-xs font-semibold uppercase tracking-wider text-ink-700">Temporadas</h2>
+          <dl class="mt-4 grid gap-4 text-sm sm:grid-cols-3">
+            <div class="rounded-xl bg-white px-4 py-3 ring-1 ring-sand-200">
+              <dt class="font-semibold text-ink-900">Baja</dt>
+              <dd class="mt-1 text-ink-700/80">Ene–Mar y Nov (excl. festivos)</dd>
+            </div>
+            <div class="rounded-xl bg-white px-4 py-3 ring-1 ring-sand-200">
+              <dt class="font-semibold text-ink-900">Media</dt>
+              <dd class="mt-1 text-ink-700/80">Abr–Jun y Sep–Oct</dd>
+            </div>
+            <div class="rounded-xl bg-white px-4 py-3 ring-1 ring-accent/40">
+              <dt class="font-semibold text-ink-900">Alta</dt>
+              <dd class="mt-1 text-ink-700/80">Jul–Ago, Semana Santa y puentes</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- Habitaciones -->
+      <section id="habitaciones" class="scroll-mt-28 py-16 sm:py-20">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="max-w-2xl">
+            <h2 class="font-display text-4xl font-semibold text-ink-900">Alojamiento</h2>
+            <p class="mt-3 text-ink-700/80">
+              Precio por habitación y noche. Desayuno buffet incluido. Tasas turísticas locales no incluidas (consultar
+              en recepción).
+            </p>
+          </div>
+
+          <div class="mt-10 overflow-x-auto rounded-2xl border border-sand-200 bg-white shadow-sm">
+            <table class="w-full min-w-[640px] text-left text-sm">
+              <thead class="bg-ink-900 text-xs font-semibold uppercase tracking-wider text-white">
+                <tr>
+                  <th class="px-5 py-4" scope="col">Tipo de habitación</th>
+                  <th class="px-5 py-4 text-right" scope="col">Baja</th>
+                  <th class="px-5 py-4 text-right" scope="col">Media</th>
+                  <th class="px-5 py-4 text-right" scope="col">Alta</th>
+                  <th class="px-5 py-4" scope="col">Ocupación</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-sand-200">
+                <tr>
+                  <td class="px-5 py-4">
+                    <p class="font-semibold text-ink-900">Estándar Jardín</p>
+                    <p class="text-xs text-ink-700/65">28 m² · vista interior</p>
+                  </td>
+                  <td class="px-5 py-4 text-right font-medium">149 €</td>
+                  <td class="px-5 py-4 text-right font-medium">169 €</td>
+                  <td class="px-5 py-4 text-right font-medium text-accent">199 €</td>
+                  <td class="px-5 py-4 text-ink-700/85">2 pers.</td>
+                </tr>
+                <tr class="bg-sand-50/80">
+                  <td class="px-5 py-4">
+                    <p class="font-semibold text-ink-900">Superior Vista Mar</p>
+                    <p class="text-xs text-ink-700/65">32 m² · balcón</p>
+                  </td>
+                  <td class="px-5 py-4 text-right font-medium">189 €</td>
+                  <td class="px-5 py-4 text-right font-medium">219 €</td>
+                  <td class="px-5 py-4 text-right font-medium text-accent">269 €</td>
+                  <td class="px-5 py-4 text-ink-700/85">2 pers.</td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-4">
+                    <p class="font-semibold text-ink-900">Deluxe Terraza</p>
+                    <p class="text-xs text-ink-700/65">42 m² · tumbonas privadas</p>
+                  </td>
+                  <td class="px-5 py-4 text-right font-medium">249 €</td>
+                  <td class="px-5 py-4 text-right font-medium">289 €</td>
+                  <td class="px-5 py-4 text-right font-medium text-accent">339 €</td>
+                  <td class="px-5 py-4 text-ink-700/85">2 pers.</td>
+                </tr>
+                <tr class="bg-sand-50/80">
+                  <td class="px-5 py-4">
+                    <p class="font-semibold text-ink-900">Suite Jacuzzi</p>
+                    <p class="text-xs text-ink-700/65">55 m² · terraza + jacuzzi</p>
+                  </td>
+                  <td class="px-5 py-4 text-right font-medium">329 €</td>
+                  <td class="px-5 py-4 text-right font-medium">389 €</td>
+                  <td class="px-5 py-4 text-right font-medium text-accent">459 €</td>
+                  <td class="px-5 py-4 text-ink-700/85">2–4 pers.</td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-4">
+                    <p class="font-semibold text-ink-900">Ático Familiar</p>
+                    <p class="text-xs text-ink-700/65">78 m² · salón + cocina</p>
+                  </td>
+                  <td class="px-5 py-4 text-right font-medium">449 €</td>
+                  <td class="px-5 py-4 text-right font-medium">519 €</td>
+                  <td class="px-5 py-4 text-right font-medium text-accent">599 €</td>
+                  <td class="px-5 py-4 text-ink-700/85">hasta 5 pers.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <ul class="mt-6 grid gap-2 text-sm text-ink-700/85 sm:grid-cols-2">
+            <li>• <strong class="text-ink-900">3.ª / 4.ª persona</strong> en habitaciones compatibles: +45 € / noche (baja y media), +55 € (alta)</li>
+            <li>• <strong class="text-ink-900">Niño 3–12 años</strong> en cama extra: +25 € / noche (desayuno incluido)</li>
+            <li>• <strong class="text-ink-900">Menores de 3 años</strong> gratis en cuna (bajo petición)</li>
+            <li>• <strong class="text-ink-900">Mascotas</strong> (perro &lt; 10 kg): 25 € / estancia + depósito 100 €</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Packs -->
+      <section id="packs" class="scroll-mt-28 border-y border-sand-200 bg-white py-16 sm:py-20">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 class="font-display text-4xl font-semibold text-ink-900">Packs especiales</h2>
+          <p class="mt-3 max-w-2xl text-ink-700/80">Mínimo 2 noches. Precio total por habitación según categoría base indicada.</p>
+
+          <div class="mt-10 grid gap-6 md:grid-cols-3">
+            <article class="flex flex-col rounded-2xl border border-sand-200 p-6">
+              <p class="text-xs font-semibold uppercase tracking-wider text-accent">Escapada</p>
+              <h3 class="mt-2 font-display text-2xl font-semibold text-ink-900">Romántica 2 noches</h3>
+              <p class="mt-3 flex-1 text-sm text-ink-700/80">
+                Superior Vista Mar, cena para dos, espumoso en habitación y late check-out 14:00.
+              </p>
+              <p class="mt-6 font-display text-3xl font-semibold text-ink-900">
+                desde <span class="text-accent">449 €</span>
+              </p>
+              <p class="text-xs text-ink-700/60">pareja · temporada baja/media</p>
+            </article>
+            <article class="relative flex flex-col rounded-2xl border-2 border-accent bg-sand-50 p-6 shadow-md">
+              <span class="absolute -top-3 right-4 rounded-full bg-accent px-3 py-1 text-xs font-semibold text-ink-900"
+                >Popular</span
+              >
+              <p class="text-xs font-semibold uppercase tracking-wider text-accent">Bienestar</p>
+              <h3 class="mt-2 font-display text-2xl font-semibold text-ink-900">Spa 3 noches</h3>
+              <p class="mt-3 flex-1 text-sm text-ink-700/80">
+                Deluxe Terraza, circuito termal diario y masaje 50 min de bienvenida por persona.
+              </p>
+              <p class="mt-6 font-display text-3xl font-semibold text-ink-900">
+                desde <span class="text-accent">899 €</span>
+              </p>
+              <p class="text-xs text-ink-700/60">2 adultos · temporada baja/media</p>
+            </article>
+            <article class="flex flex-col rounded-2xl border border-sand-200 p-6">
+              <p class="text-xs font-semibold uppercase tracking-wider text-accent">Familia</p>
+              <h3 class="mt-2 font-display text-2xl font-semibold text-ink-900">Verano kids 5 noches</h3>
+              <p class="mt-3 flex-1 text-sm text-ink-700/80">
+                Ático Familiar, club infantil (jul–ago), menú niños y 1ª hora kayak/día incluida.
+              </p>
+              <p class="mt-6 font-display text-3xl font-semibold text-ink-900">
+                desde <span class="text-accent">2.490 €</span>
+              </p>
+              <p class="text-xs text-ink-700/60">2 adultos + 2 niños · temporada alta</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Spa y restauración -->
+      <section class="py-16 sm:py-20">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-12 lg:grid-cols-2">
+            <div id="spa" class="scroll-mt-28">
+              <h2 class="font-display text-3xl font-semibold text-ink-900">Spa (a la carta)</h2>
+              <p class="mt-2 text-sm text-ink-700/80">No incluido en tarifa de habitación salvo packs. Reserva previa.</p>
+              <div class="mt-6 overflow-hidden rounded-2xl border border-sand-200 bg-white">
+                <table class="w-full text-sm">
+                  <tbody class="divide-y divide-sand-200">
+                    <tr>
+                      <td class="px-4 py-3 text-ink-900">Circuito termal (90 min)</td>
+                      <td class="px-4 py-3 text-right font-medium">35 €</td>
+                    </tr>
+                    <tr class="bg-sand-50/50">
+                      <td class="px-4 py-3 text-ink-900">Masaje relajante 50 min</td>
+                      <td class="px-4 py-3 text-right font-medium">89 €</td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-3 text-ink-900">Masaje deportivo 60 min</td>
+                      <td class="px-4 py-3 text-right font-medium">95 €</td>
+                    </tr>
+                    <tr class="bg-sand-50/50">
+                      <td class="px-4 py-3 text-ink-900">Ritual piedras calientes 75 min</td>
+                      <td class="px-4 py-3 text-right font-medium">120 €</td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-3 text-ink-900">Facial hidratante 45 min</td>
+                      <td class="px-4 py-3 text-right font-medium">72 €</td>
+                    </tr>
+                    <tr class="bg-sand-50/50">
+                      <td class="px-4 py-3 text-ink-900">Pack pareja (circuito + masaje 50 min c/u)</td>
+                      <td class="px-4 py-3 text-right font-medium">298 €</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div id="restauracion" class="scroll-mt-28">
+              <h2 class="font-display text-3xl font-semibold text-ink-900">Restauración</h2>
+              <p class="mt-2 text-sm text-ink-700/80">Restaurante Brisa y room service. Precios por persona salvo menú niños.</p>
+              <div class="mt-6 overflow-hidden rounded-2xl border border-sand-200 bg-white">
+                <table class="w-full text-sm">
+                  <tbody class="divide-y divide-sand-200">
+                    <tr>
+                      <td class="px-4 py-3 text-ink-900">Desayuno buffet (huésped ADR)</td>
+                      <td class="px-4 py-3 text-right font-medium text-accent">Incluido</td>
+                    </tr>
+                    <tr class="bg-sand-50/50">
+                      <td class="px-4 py-3 text-ink-900">Desayuno (no huésped)</td>
+                      <td class="px-4 py-3 text-right font-medium">22 €</td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-3 text-ink-900">Menú mediodía (3 platos + bebida)</td>
+                      <td class="px-4 py-3 text-right font-medium">38 €</td>
+                    </tr>
+                    <tr class="bg-sand-50/50">
+                      <td class="px-4 py-3 text-ink-900">Menú degustación maridado</td>
+                      <td class="px-4 py-3 text-right font-medium">75 €</td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-3 text-ink-900">Cena à la carte (media)</td>
+                      <td class="px-4 py-3 text-right font-medium">45–65 €</td>
+                    </tr>
+                    <tr class="bg-sand-50/50">
+                      <td class="px-4 py-3 text-ink-900">Menú infantil</td>
+                      <td class="px-4 py-3 text-right font-medium">14 €</td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-3 text-ink-900">Room service (suplemento)</td>
+                      <td class="px-4 py-3 text-right font-medium">+12 %</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Extras y eventos -->
+      <section id="extras" class="scroll-mt-28 border-t border-sand-200 bg-ink-900 py-16 text-white sm:py-20">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 class="font-display text-4xl font-semibold">Extras y eventos</h2>
+          <div class="mt-10 grid gap-8 lg:grid-cols-2">
+            <div>
+              <h3 class="text-sm font-semibold uppercase tracking-wider text-accent-light">Servicios adicionales</h3>
+              <ul class="mt-4 space-y-3 text-sm text-white/85">
+                <li class="flex justify-between gap-4 border-b border-white/10 pb-3">
+                  <span>Parking subterráneo / 24 h</span>
+                  <span class="shrink-0 font-medium text-accent-light">18 € / día</span>
+                </li>
+                <li class="flex justify-between gap-4 border-b border-white/10 pb-3">
+                  <span>Traslado aeropuerto Alicante (1–4 pax)</span>
+                  <span class="shrink-0 font-medium text-accent-light">95 € ida</span>
+                </li>
+                <li class="flex justify-between gap-4 border-b border-white/10 pb-3">
+                  <span>Traslado aeropuerto Valencia (1–4 pax)</span>
+                  <span class="shrink-0 font-medium text-accent-light">110 € ida</span>
+                </li>
+                <li class="flex justify-between gap-4 border-b border-white/10 pb-3">
+                  <span>Kayak o paddle (hora adicional)</span>
+                  <span class="shrink-0 font-medium text-accent-light">15 €</span>
+                </li>
+                <li class="flex justify-between gap-4 border-b border-white/10 pb-3">
+                  <span>Bicicleta eléctrica / día</span>
+                  <span class="shrink-0 font-medium text-accent-light">32 €</span>
+                </li>
+                <li class="flex justify-between gap-4 pb-3">
+                  <span>Lavandería express (hasta 5 kg)</span>
+                  <span class="shrink-0 font-medium text-accent-light">28 €</span>
+                </li>
+              </ul>
+            </div>
+            <div id="eventos" class="scroll-mt-28">
+              <h3 class="text-sm font-semibold uppercase tracking-wider text-accent-light">Salones y celebraciones</h3>
+              <ul class="mt-4 space-y-3 text-sm text-white/85">
+                <li class="flex justify-between gap-4 border-b border-white/10 pb-3">
+                  <span>Sala reunión hasta 20 pax (medio día)</span>
+                  <span class="shrink-0 font-medium text-accent-light">280 €</span>
+                </li>
+                <li class="flex justify-between gap-4 border-b border-white/10 pb-3">
+                  <span>Salón banquete hasta 80 pax (solo alquiler)</span>
+                  <span class="shrink-0 font-medium text-accent-light">1.200 €</span>
+                </li>
+                <li class="flex justify-between gap-4 border-b border-white/10 pb-3">
+                  <span>Coffee break (por persona)</span>
+                  <span class="shrink-0 font-medium text-accent-light">12 €</span>
+                </li>
+                <li class="flex justify-between gap-4 border-b border-white/10 pb-3">
+                  <span>Menú cóctel boda (por persona, mín. 50)</span>
+                  <span class="shrink-0 font-medium text-accent-light">desde 68 €</span>
+                </li>
+                <li class="flex justify-between gap-4 pb-3">
+                  <span>Coordinador de eventos (jornada)</span>
+                  <span class="shrink-0 font-medium text-accent-light">350 €</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Políticas -->
+      <section id="politicas" class="scroll-mt-28 py-16 sm:py-20">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 class="font-display text-3xl font-semibold text-ink-900">Políticas de reserva</h2>
+          <div class="mt-8 grid gap-6 md:grid-cols-2">
+            <div class="rounded-2xl border border-sand-200 bg-white p-6">
+              <h3 class="font-semibold text-ink-900">Tarifa flexible</h3>
+              <p class="mt-2 text-sm leading-relaxed text-ink-700/85">
+                Cancelación gratuita hasta 48 h antes de la entrada. Pago en hotel o tarjeta de garantía. +5 % sobre
+                tarifa publicada en web.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-sand-200 bg-white p-6">
+              <h3 class="font-semibold text-ink-900">Tarifa no reembolsable</h3>
+              <p class="mt-2 text-sm leading-relaxed text-ink-700/85">
+                Prepago 100 % al reservar. −10 % sobre tarifa flexible. Sin reembolso en cancelación o no show.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-sand-200 bg-white p-6">
+              <h3 class="font-semibold text-ink-900">Entrada / salida</h3>
+              <p class="mt-2 text-sm leading-relaxed text-ink-700/85">
+                Check-in 15:00 · Check-out 11:00. Early check-in / late check-out según disponibilidad (consultar
+                precio).
+              </p>
+            </div>
+            <div class="rounded-2xl border border-sand-200 bg-white p-6">
+              <h3 class="font-semibold text-ink-900">Impuestos</h3>
+              <p class="mt-2 text-sm leading-relaxed text-ink-700/85">
+                IVA 10 % incluido en alojamiento y restauración según normativa aplicable. Tasas municipales pueden
+                aplicarse aparte.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pb-20">
+        <div
+          class="mx-auto flex max-w-7xl flex-col items-center gap-6 rounded-3xl bg-sand-200/80 px-8 py-12 text-center sm:px-12"
+        >
+          <h2 class="font-display text-3xl font-semibold text-ink-900">¿Prefieres presupuesto a medida?</h2>
+          <p class="max-w-lg text-sm text-ink-700/85">
+            Grupos, empresas y estancias largas: escríbenos con fechas y tipo de habitación.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a
+              href="index.html#reserva"
+              class="rounded-full bg-ink-900 px-8 py-3 text-sm font-semibold text-white transition hover:bg-ink-700"
+            >
+              Reservar online
+            </a>
+            <a
+              href="servicios.html"
+              class="rounded-full border border-ink-900/20 px-8 py-3 text-sm font-semibold text-ink-900 transition hover:bg-white"
+            >
+              Ver servicios
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-ink-900 py-16 text-white">
+      <div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
+        <div>
+          <p class="font-display text-2xl font-semibold">Marina Vista</p>
+          <p class="mt-4 text-sm leading-relaxed text-white/65">
+            Av. del Mediterráneo, 12<br />
+            03730 Jávea, Alicante<br />
+            España
+          </p>
+        </div>
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wider text-accent-light">Enlaces</p>
+          <ul class="mt-4 space-y-2 text-sm text-white/75">
+            <li><a href="index.html" class="hover:text-white">Inicio</a></li>
+            <li><a href="servicios.html" class="hover:text-white">Servicios</a></li>
+            <li><a href="precios.html" class="text-accent-light hover:text-white">Precios</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wider text-accent-light">Contacto</p>
+          <ul class="mt-4 space-y-2 text-sm text-white/75">
+            <li><a href="tel:+34966123456" class="hover:text-white">+34 966 123 456</a></li>
+            <li><a href="mailto:reservas@marinavista.example" class="hover:text-white">reservas@marinavista.example</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="mx-auto mt-12 max-w-7xl border-t border-white/10 px-4 pt-8 text-center text-xs text-white/40 sm:px-6 lg:px-8">
+        © 2026 Marina Vista Hotel. Tarifas orientativas — pueden variar según disponibilidad.
+      </p>
+    </footer>
+  </body>
+</html>

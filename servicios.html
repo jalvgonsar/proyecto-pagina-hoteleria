@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servicios — Marina Vista Hotel & Spa</title>
+    <meta
+      name="description"
+      content="Spa, gastronomía, playa, eventos y concierge. Todos los servicios del hotel Marina Vista."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+              sans: ['Outfit', 'system-ui', 'sans-serif'],
+            },
+            colors: {
+              sand: {
+                50: '#faf8f5',
+                100: '#f3efe8',
+                200: '#e6ddd0',
+              },
+              ink: {
+                900: '#1a1814',
+                700: '#3d3830',
+              },
+              accent: {
+                DEFAULT: '#b8860b',
+                light: '#d4a84b',
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-sans text-ink-700 bg-sand-50 antialiased">
+    <header
+      class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-ink-900/90 backdrop-blur-md"
+    >
+      <nav
+        class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+        aria-label="Principal"
+      >
+        <a href="index.html" class="font-display text-2xl font-semibold tracking-wide text-white sm:text-3xl">
+          Marina <span class="text-accent-light">Vista</span>
+        </a>
+        <div class="hidden items-center gap-8 md:flex">
+          <a href="index.html#habitaciones" class="text-sm font-medium text-white/80 transition hover:text-white"
+            >Habitaciones</a
+          >
+          <a href="servicios.html" class="text-sm font-medium text-accent-light" aria-current="page">Servicios</a>
+          <a href="precios.html" class="text-sm font-medium text-white/80 transition hover:text-white">Precios</a>
+          <a href="index.html#galeria" class="text-sm font-medium text-white/80 transition hover:text-white"
+            >Galería</a
+          >
+          <a href="index.html#contacto" class="text-sm font-medium text-white/80 transition hover:text-white"
+            >Contacto</a
+          >
+        </div>
+        <a
+          href="index.html#reserva"
+          class="rounded-full bg-accent px-5 py-2 text-sm font-medium text-ink-900 transition hover:bg-accent-light"
+        >
+          Reservar
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Cabecera de página -->
+      <section class="relative overflow-hidden bg-ink-900 pt-28 pb-16 text-white sm:pt-32 sm:pb-20">
+        <img
+          src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1920&q=80"
+          alt=""
+          class="absolute inset-0 h-full w-full object-cover opacity-30"
+          width="1920"
+          height="1080"
+          aria-hidden="true"
+        />
+        <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p class="text-sm font-medium uppercase tracking-[0.25em] text-accent-light">Hotel 5★ boutique</p>
+          <h1 class="font-display mt-3 max-w-3xl text-5xl font-semibold sm:text-6xl">Nuestros servicios</h1>
+          <p class="mt-6 max-w-2xl text-lg text-white/80">
+            Todo lo que necesitas durante tu estancia: incluido en la tarifa, bajo reserva o a la carta. Pregunta en
+            recepción o a tu concierge personal.
+          </p>
+        </div>
+      </section>
+
+      <!-- Incluidos en la estancia -->
+      <section class="border-b border-sand-200 bg-sand-100 py-12">
+        <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-10 gap-y-3 px-4 text-center sm:px-6 lg:px-8">
+          <span class="text-sm font-medium text-ink-900">✓ Wi‑Fi de alta velocidad</span>
+          <span class="text-sm font-medium text-ink-900">✓ Desayuno buffet</span>
+          <span class="text-sm font-medium text-ink-900">✓ Acceso piscina y gimnasio</span>
+          <span class="text-sm font-medium text-ink-900">✓ Parking vigilado</span>
+          <span class="text-sm font-medium text-ink-900">✓ Toallas de playa</span>
+        </div>
+      </section>
+
+      <!-- Catálogo de servicios -->
+      <section class="py-16 sm:py-24">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-10 lg:grid-cols-2">
+            <!-- Alojamiento -->
+            <article
+              id="alojamiento"
+              class="scroll-mt-28 rounded-2xl border border-sand-200 bg-white p-8 shadow-sm lg:p-10"
+            >
+              <div class="flex items-start gap-4">
+                <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-sand-100 text-2xl" aria-hidden="true"
+                  >🛏️</span
+                >
+                <div>
+                  <h2 class="font-display text-3xl font-semibold text-ink-900">Alojamiento</h2>
+                  <p class="mt-2 text-sm leading-relaxed text-ink-700/80">
+                    Habitaciones y suites con climatización, minibar, caja fuerte y servicio de limpieza diario.
+                  </p>
+                </div>
+              </div>
+              <ul class="mt-6 space-y-2 text-sm text-ink-700/90">
+                <li class="flex gap-2"><span class="text-accent">•</span> Limpieza diaria y turn-down nocturno bajo petición</li>
+                <li class="flex gap-2"><span class="text-accent">•</span> Lavandería y planchado exprés (24 h)</li>
+                <li class="flex gap-2"><span class="text-accent">•</span> Cunas y camas supletorias sin coste</li>
+                <li class="flex gap-2"><span class="text-accent">•</span> Late check-out según disponibilidad</li>
+              </ul>
+            </article>
+
+            <!-- Gastronomía -->
+            <article
+              id="gastronomia"
+              class="scroll-mt-28 rounded-2xl border border-sand-200 bg-white p-8 shadow-sm lg:p-10"
+            >
+              <div class="flex items-start gap-4">
+                <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-sand-100 text-2xl" aria-hidden="true"
+                  >🍽️</span
+                >
+                <div>
+                  <h2 class="font-display text-3xl font-semibold text-ink-900">Gastronomía</h2>
+                  <p class="mt-2 text-sm leading-relaxed text-ink-700/80">
+                    Restaurante Brisa, bar de cócteles en la terraza y room service hasta la 01:00.
+                  </p>
+                </div>
+              </div>
+              <ul class="mt-6 space-y-2 text-sm text-ink-700/90">
+                <li class="flex gap-2"><span class="text-accent">•</span> Desayuno buffet con opciones sin gluten y veganas</li>
+                <li class="flex gap-2"><span class="text-accent">•</span> Cena à la carte y menú degustación maridado</li>
+                <li class="flex gap-2"><span class="text-accent">•</span> Picnics en la playa y cenas privadas en terraza</li>
+                <li class="flex gap-2"><span class="text-accent">•</span> Menú infantil y tronas en comedor</li>
+              </ul>
+            </article>
+
+            <!-- Spa -->
+            <article id="spa" class="scroll-mt-28 rounded-2xl border border-accent/30 bg-ink-900 p-8 text-white lg:p-10">
+              <div class="flex items-start gap-4">
+                <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/10 text-2xl" aria-hidden="true"
+                  >✨</span
+                >
+                <div>
+                  <h2 class="font-display text-3xl font-semibold">Spa & wellness</h2>
+                  <p class="mt-2 text-sm leading-relaxed text-white/75">
+                    800 m² de circuito termal, cabina de parejas y sauna con vista al mar.
+                  </p>
+                </div>
+              </div>
+              <ul class="mt-6 space-y-2 text-sm text-white/85">
+                <li class="flex gap-2"><span class="text-accent-light">•</span> Acceso al circuito termal (90 min) — 35 € / persona</li>
+                <li class="flex gap-2"><span class="text-accent-light">•</span> Masaje relajante 50 min — desde 89 €</li>
+                <li class="flex gap-2"><span class="text-accent-light">•</span> Ritual piedras calientes 75 min — 120 €</li>
+                <li class="flex gap-2"><span class="text-accent-light">•</span> Yoga en terraza (grupos reducidos, 08:00 h)</li>
+              </ul>
+              <p class="mt-6 text-xs text-white/50">Reserva con antelación en recepción o ext. 4200.</p>
+            </article>
+
+            <!-- Playa y piscina -->
+            <article
+              id="playa"
+              class="scroll-mt-28 rounded-2xl border border-sand-200 bg-white p-8 shadow-sm lg:p-10"
+            >
+              <div class="flex items-start gap-4">
+                <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-sand-100 text-2xl" aria-hidden="true"
+                  >🌊</span
+                >
+                <div>
+                  <h2 class="font-display text-3xl font-semibold text-ink-900">Playa y piscina</h2>
+                  <p class="mt-2 text-sm leading-relaxed text-ink-700/80">
+                    Zona reservada en la arena, piscina infinity climatizada y solarium con servicio de bar.
+                  </p>
+                </div>
+              </div>
+              <ul class="mt-6 space-y-2 text-sm text-ink-700/90">
+                <li class="flex gap-2"><span class="text-accent">•</span> Hamacas, sombrillas y toallas de playa incluidas</li>
+                <li class="flex gap-2"><span class="text-accent">•</span> Kayak y paddle surf (1ª hora gratis / día)</li>
+                <li class="flex gap-2"><span class="text-accent">•</span> Monitor de natación infantil (julio–agosto)</li>
+                <li class="flex gap-2"><span class="text-accent">•</span> Duchas exteriores y vestuarios junto a piscina</li>
+              </ul>
+            </article>
+
+            <!-- Actividades -->
+            <article
+              id="actividades"
+              class="scroll-mt-28 rounded-2xl border border-sand-200 bg-white p-8 shadow-sm lg:p-10"
+            >
+              <div class="flex items-start gap-4">
+                <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-sand-100 text-2xl" aria-hidden="true"
+                  >⛵</span
+                >
+                <div>
+                  <h2 class="font-display text-3xl font-semibold text-ink-900">Ocio y excursiones</h2>
+                  <p class="mt-2 text-sm leading-relaxed text-ink-700/80">
+                    Organizamos salidas a medida con guías locales y proveedores de confianza.
+                  </p>
+                </div>
+              </div>
+              <ul class="mt-6 space-y-2 text-sm text-ink-700/90">
+                <li class="flex gap-2"><span class="text-accent">•</span> Paseo en velero al atardecer (mín. 4 personas)</li>
+                <li class="flex gap-2"><span class="text-accent">•</span> Senderismo por el Parque Natural del Montgó</li>
+                <li class="flex gap-2"><span class="text-accent">•</span> Visitas a bodegas y mercados de la Marina Alta</li>
+                <li class="flex gap-2"><span class="text-accent">•</span> Bicicletas eléctricas de alquiler en el hotel</li>
+              </ul>
+            </article>
+
+            <!-- Eventos -->
+            <article
+              id="eventos"
+              class="scroll-mt-28 rounded-2xl border border-sand-200 bg-white p-8 shadow-sm lg:p-10"
+            >
+              <div class="flex items-start gap-4">
+                <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-sand-100 text-2xl" aria-hidden="true"
+                  >💼</span
+                >
+                <div>
+                  <h2 class="font-display text-3xl font-semibold text-ink-900">Eventos y reuniones</h2>
+                  <p class="mt-2 text-sm leading-relaxed text-ink-700/80">
+                    Salones modulares con luz natural, equipamiento AV y coffee breaks personalizados.
+                  </p>
+                </div>
+              </div>
+              <ul class="mt-6 space-y-2 text-sm text-ink-700/90">
+                <li class="flex gap-2"><span class="text-accent">•</span> Capacidad hasta 120 personas en formato cóctel</li>
+                <li class="flex gap-2"><span class="text-accent">•</span> Bodas íntimas en terraza-jardín (máx. 80 invitados)</li>
+                <li class="flex gap-2"><span class="text-accent">•</span> Salas de reunión 10–40 pax con Wi‑Fi dedicado</li>
+                <li class="flex gap-2"><span class="text-accent">•</span> Coordinador de eventos in-house</li>
+              </ul>
+            </article>
+
+            <!-- Concierge -->
+            <article
+              id="concierge"
+              class="scroll-mt-28 rounded-2xl border border-sand-200 bg-white p-8 shadow-sm lg:p-10"
+            >
+              <div class="flex items-start gap-4">
+                <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-sand-100 text-2xl" aria-hidden="true"
+                  >🛎️</span
+                >
+                <div>
+                  <h2 class="font-display text-3xl font-semibold text-ink-900">Concierge & traslados</h2>
+                  <p class="mt-2 text-sm leading-relaxed text-ink-700/80">
+                    Equipo disponible 24 h para reservas, traslados y peticiones especiales.
+                  </p>
+                </div>
+              </div>
+              <ul class="mt-6 space-y-2 text-sm text-ink-700/90">
+                <li class="flex gap-2"><span class="text-accent">•</span> Traslado aeropuerto Valencia o Alicante (bajo reserva)</li>
+                <li class="flex gap-2"><span class="text-accent">•</span> Servicio de maletero y aparcacoches</li>
+                <li class="flex gap-2"><span class="text-accent">•</span> Entradas anticipadas a museos y espectáculos</li>
+                <li class="flex gap-2"><span class="text-accent">•</span> Flores, celebraciones y decoración de habitación</li>
+              </ul>
+            </article>
+
+            <!-- Familias -->
+            <article
+              id="familias"
+              class="scroll-mt-28 rounded-2xl border border-sand-200 bg-white p-8 shadow-sm lg:p-10"
+            >
+              <div class="flex items-start gap-4">
+                <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-sand-100 text-2xl" aria-hidden="true"
+                  >👨‍👩‍👧</span
+                >
+                <div>
+                  <h2 class="font-display text-3xl font-semibold text-ink-900">Familias</h2>
+                  <p class="mt-2 text-sm leading-relaxed text-ink-700/80">
+                    Estancia cómoda para todas las edades, con zonas kid-friendly y menús adaptados.
+                  </p>
+                </div>
+              </div>
+              <ul class="mt-6 space-y-2 text-sm text-ink-700/90">
+                <li class="flex gap-2"><span class="text-accent">•</span> Club infantil (4–12 años) en temporada alta</li>
+                <li class="flex gap-2"><span class="text-accent">•</span> Babysitting con canguros homologados</li>
+                <li class="flex gap-2"><span class="text-accent">•</span> Piscina infantil separada y tumbonas familiares</li>
+                <li class="flex gap-2"><span class="text-accent">•</span> Packs bienvenida con actividades locales</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Horarios -->
+      <section class="border-y border-sand-200 bg-white py-16">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 class="font-display text-center text-3xl font-semibold text-ink-900 sm:text-4xl">Horarios</h2>
+          <div class="mx-auto mt-10 max-w-3xl overflow-hidden rounded-2xl border border-sand-200">
+            <table class="w-full text-left text-sm">
+              <thead class="bg-sand-100 text-xs font-semibold uppercase tracking-wider text-ink-700">
+                <tr>
+                  <th class="px-6 py-4" scope="col">Servicio</th>
+                  <th class="px-6 py-4" scope="col">Horario</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-sand-200">
+                <tr>
+                  <td class="px-6 py-4 font-medium text-ink-900">Recepción</td>
+                  <td class="px-6 py-4 text-ink-700/85">24 horas</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 font-medium text-ink-900">Desayuno buffet</td>
+                  <td class="px-6 py-4 text-ink-700/85">07:30 – 11:00</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 font-medium text-ink-900">Restaurante (cena)</td>
+                  <td class="px-6 py-4 text-ink-700/85">19:30 – 23:00</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 font-medium text-ink-900">Spa</td>
+                  <td class="px-6 py-4 text-ink-700/85">10:00 – 20:00</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 font-medium text-ink-900">Piscina</td>
+                  <td class="px-6 py-4 text-ink-700/85">08:00 – 22:00</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 font-medium text-ink-900">Gimnasio</td>
+                  <td class="px-6 py-4 text-ink-700/85">06:00 – 23:00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="py-16 sm:py-20">
+        <div
+          class="mx-auto flex max-w-7xl flex-col items-center gap-6 rounded-3xl bg-ink-900 px-8 py-14 text-center text-white sm:px-12"
+        >
+          <h2 class="font-display text-3xl font-semibold sm:text-4xl">¿Reservamos tu experiencia?</h2>
+          <p class="max-w-xl text-white/75">
+            Indícanos fechas y servicios que te interesan; te enviamos una propuesta personalizada en menos de 2 horas.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a
+              href="index.html#reserva"
+              class="rounded-full bg-accent px-8 py-3 text-sm font-semibold text-ink-900 transition hover:bg-accent-light"
+            >
+              Ver disponibilidad
+            </a>
+            <a
+              href="mailto:reservas@marinavista.example?subject=Consulta%20servicios"
+              class="rounded-full border border-white/30 px-8 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+            >
+              Escribir a reservas
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-ink-900 py-16 text-white">
+      <div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
+        <div>
+          <p class="font-display text-2xl font-semibold">Marina Vista</p>
+          <p class="mt-4 text-sm leading-relaxed text-white/65">
+            Av. del Mediterráneo, 12<br />
+            03730 Jávea, Alicante<br />
+            España
+          </p>
+        </div>
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wider text-accent-light">Contacto</p>
+          <ul class="mt-4 space-y-2 text-sm text-white/75">
+            <li><a href="tel:+34966123456" class="hover:text-white">+34 966 123 456</a></li>
+            <li><a href="mailto:reservas@marinavista.example" class="hover:text-white">reservas@marinavista.example</a></li>
+            <li><a href="servicios.html" class="text-accent-light hover:text-white">Servicios del hotel</a></li>
+            <li><a href="precios.html" class="hover:text-white">Tarifas y precios</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wider text-accent-light">Volver</p>
+          <ul class="mt-4 space-y-2 text-sm text-white/75">
+            <li><a href="index.html" class="hover:text-white">Inicio</a></li>
+            <li><a href="index.html#habitaciones" class="hover:text-white">Habitaciones</a></li>
+            <li><a href="index.html#contacto" class="hover:text-white">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="mx-auto mt-12 max-w-7xl border-t border-white/10 px-4 pt-8 text-center text-xs text-white/40 sm:px-6 lg:px-8">
+        © 2026 Marina Vista Hotel. Demostración HTML + Tailwind CSS.
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marina Vista — Hotel & Spa</title>
+    <meta
+      name="description"
+      content="Hotel boutique frente al mar. Habitaciones, spa y gastronomía local."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+              sans: ['Outfit', 'system-ui', 'sans-serif'],
+            },
+            colors: {
+              sand: {
+                50: '#faf8f5',
+                100: '#f3efe8',
+                200: '#e6ddd0',
+              },
+              ink: {
+                900: '#1a1814',
+                700: '#3d3830',
+              },
+              accent: {
+                DEFAULT: '#b8860b',
+                light: '#d4a84b',
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .hero-gradient {
+        background: linear-gradient(
+          135deg,
+          rgba(26, 24, 20, 0.72) 0%,
+          rgba(26, 24, 20, 0.35) 50%,
+          rgba(26, 24, 20, 0.55) 100%
+        );
+      }
+    </style>
+  </head>
+  <body class="font-sans text-ink-700 bg-sand-50 antialiased">
+    <!-- Barra superior -->
+    <header
+      class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-ink-900/80 backdrop-blur-md"
+    >
+      <nav
+        class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+        aria-label="Principal"
+      >
+        <a href="index.html" class="font-display text-2xl font-semibold tracking-wide text-white sm:text-3xl">
+          Marina <span class="text-accent-light">Vista</span>
+        </a>
+        <div class="hidden items-center gap-8 md:flex">
+          <a href="#habitaciones" class="text-sm font-medium text-white/80 transition hover:text-white"
+            >Habitaciones</a
+          >
+          <a href="servicios.html" class="text-sm font-medium text-white/80 transition hover:text-white"
+            >Servicios</a
+          >
+          <a href="precios.html" class="text-sm font-medium text-white/80 transition hover:text-white"
+            >Precios</a
+          >
+          <a href="#experiencias" class="text-sm font-medium text-white/80 transition hover:text-white"
+            >Experiencias</a
+          >
+          <a href="#galeria" class="text-sm font-medium text-white/80 transition hover:text-white"
+            >Galería</a
+          >
+          <a href="#contacto" class="text-sm font-medium text-white/80 transition hover:text-white"
+            >Contacto</a
+          >
+        </div>
+        <a
+          href="#reserva"
+          class="rounded-full bg-accent px-5 py-2 text-sm font-medium text-ink-900 transition hover:bg-accent-light"
+        >
+          Reservar
+        </a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative min-h-screen flex items-end">
+      <img
+        src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1920&q=80"
+        alt="Piscina infinity con vista al mar al atardecer"
+        class="absolute inset-0 h-full w-full object-cover"
+        width="1920"
+        height="1280"
+        fetchpriority="high"
+      />
+      <div class="hero-gradient absolute inset-0"></div>
+      <div class="relative z-10 mx-auto w-full max-w-7xl px-4 pb-16 pt-32 sm:px-6 lg:px-8 lg:pb-24">
+        <p class="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-accent-light">
+          Costa Mediterránea · 5★ boutique
+        </p>
+        <h1 class="font-display max-w-3xl text-5xl font-semibold leading-tight text-white sm:text-6xl lg:text-7xl">
+          Donde el mar<br />
+          <em class="font-medium not-italic text-sand-100">acoge cada amanecer</em>
+        </h1>
+        <p class="mt-6 max-w-xl text-lg text-white/85">
+          42 habitaciones con terraza, spa termal y cocina de autor. Tu escapada a solo dos horas de la ciudad.
+        </p>
+
+        <!-- Widget reserva -->
+        <form
+          id="reserva"
+          class="mt-10 grid gap-3 rounded-2xl border border-white/20 bg-white/95 p-4 shadow-2xl backdrop-blur sm:grid-cols-2 lg:grid-cols-5 lg:gap-4 lg:p-6"
+          action="#"
+          method="get"
+        >
+          <div class="lg:col-span-1">
+            <label for="entrada" class="mb-1 block text-xs font-semibold uppercase tracking-wider text-ink-700"
+              >Entrada</label
+            >
+            <input
+              type="date"
+              id="entrada"
+              name="entrada"
+              class="w-full rounded-lg border border-sand-200 bg-sand-50 px-3 py-2.5 text-sm focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/30"
+              required
+            />
+          </div>
+          <div class="lg:col-span-1">
+            <label for="salida" class="mb-1 block text-xs font-semibold uppercase tracking-wider text-ink-700"
+              >Salida</label
+            >
+            <input
+              type="date"
+              id="salida"
+              name="salida"
+              class="w-full rounded-lg border border-sand-200 bg-sand-50 px-3 py-2.5 text-sm focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/30"
+              required
+            />
+          </div>
+          <div class="lg:col-span-1">
+            <label for="huespedes" class="mb-1 block text-xs font-semibold uppercase tracking-wider text-ink-700"
+              >Huéspedes</label
+            >
+            <select
+              id="huespedes"
+              name="huespedes"
+              class="w-full rounded-lg border border-sand-200 bg-sand-50 px-3 py-2.5 text-sm focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/30"
+            >
+              <option value="1">1 adulto</option>
+              <option value="2" selected>2 adultos</option>
+              <option value="3">3 adultos</option>
+              <option value="4">4 adultos</option>
+            </select>
+          </div>
+          <div class="sm:col-span-2 lg:col-span-2 flex items-end">
+            <button
+              type="submit"
+              class="w-full rounded-lg bg-ink-900 py-3 text-sm font-semibold text-white transition hover:bg-ink-700"
+            >
+              Comprobar disponibilidad
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="experiencias" class="py-20 sm:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl">
+          <h2 class="font-display text-4xl font-semibold text-ink-900 sm:text-5xl">Experiencias pensadas para ti</h2>
+          <p class="mt-4 text-lg text-ink-700/80">
+            Desde el desayuno en la terraza hasta tratamientos en el spa: cada detalle está diseñado para el descanso.
+          </p>
+        </div>
+        <ul class="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <li class="group rounded-2xl border border-sand-200 bg-white p-8 transition hover:border-accent/40 hover:shadow-lg">
+            <span class="text-3xl" aria-hidden="true">🌊</span>
+            <h3 class="mt-4 font-display text-2xl font-semibold text-ink-900">Playa privada</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-700/75">
+              Hamacas, servicio de toallas y bar de cócteles hasta el ocaso.
+            </p>
+          </li>
+          <li class="group rounded-2xl border border-sand-200 bg-white p-8 transition hover:border-accent/40 hover:shadow-lg">
+            <span class="text-3xl" aria-hidden="true">✨</span>
+            <h3 class="mt-4 font-display text-2xl font-semibold text-ink-900">Spa & wellness</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-700/75">
+              Circuito termal, masajes y clases de yoga al amanecer.
+            </p>
+          </li>
+          <li class="group rounded-2xl border border-sand-200 bg-white p-8 transition hover:border-accent/40 hover:shadow-lg">
+            <span class="text-3xl" aria-hidden="true">🍷</span>
+            <h3 class="mt-4 font-display text-2xl font-semibold text-ink-900">Restaurante Brisa</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-700/75">
+              Producto kilómetro cero y maridajes con bodegas locales.
+            </p>
+          </li>
+          <li class="group rounded-2xl border border-sand-200 bg-white p-8 transition hover:border-accent/40 hover:shadow-lg">
+            <span class="text-3xl" aria-hidden="true">🚗</span>
+            <h3 class="mt-4 font-display text-2xl font-semibold text-ink-900">Concierge 24h</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-700/75">
+              Traslados, excursiones en velero y entradas sin colas.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Habitaciones -->
+    <section id="habitaciones" class="bg-ink-900 py-20 text-white sm:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <h2 class="font-display text-4xl font-semibold sm:text-5xl">Habitaciones & suites</h2>
+            <p class="mt-4 max-w-xl text-white/70">
+              Lino egipcio, ducha efecto lluvia y vistas al Mediterráneo desde cada balcón.
+            </p>
+          </div>
+          <p class="text-sm text-accent-light">Cancelación flexible · Desayuno incluido</p>
+        </div>
+
+        <div class="mt-14 grid gap-8 lg:grid-cols-3">
+          <article class="overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10">
+            <img
+              src="https://images.unsplash.com/photo-1611892440504-42a784e140d1?auto=format&fit=crop&w=800&q=80"
+              alt="Habitación superior con cama king y decoración cálida"
+              class="h-56 w-full object-cover"
+              width="800"
+              height="400"
+              loading="lazy"
+            />
+            <div class="p-6">
+              <h3 class="font-display text-2xl font-semibold">Superior Vista Mar</h3>
+              <p class="mt-2 text-sm text-white/65">32 m² · 2 personas · Balcón</p>
+              <p class="mt-4 font-semibold text-accent-light">desde 189 € <span class="font-normal text-white/50">/ noche</span></p>
+            </div>
+          </article>
+          <article class="overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10 lg:-translate-y-4 lg:shadow-2xl">
+            <img
+              src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80"
+              alt="Suite con jacuzzi y ventanales al mar"
+              class="h-56 w-full object-cover"
+              width="800"
+              height="400"
+              loading="lazy"
+            />
+            <div class="p-6">
+              <span class="rounded-full bg-accent/20 px-3 py-1 text-xs font-medium text-accent-light">Más reservada</span>
+              <h3 class="mt-3 font-display text-2xl font-semibold">Suite Jacuzzi</h3>
+              <p class="mt-2 text-sm text-white/65">55 m² · 2–4 personas · Terraza privada</p>
+              <p class="mt-4 font-semibold text-accent-light">desde 329 € <span class="font-normal text-white/50">/ noche</span></p>
+            </div>
+          </article>
+          <article class="overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10">
+            <img
+              src="https://images.unsplash.com/photo-1595576513543-51a9bb561c2c?auto=format&fit=crop&w=800&q=80"
+              alt="Ático luminoso con salón y cocina integrada"
+              class="h-56 w-full object-cover"
+              width="800"
+              height="400"
+              loading="lazy"
+            />
+            <div class="p-6">
+              <h3 class="font-display text-2xl font-semibold">Ático Familiar</h3>
+              <p class="mt-2 text-sm text-white/65">78 m² · hasta 5 personas · Cocina</p>
+              <p class="mt-4 font-semibold text-accent-light">desde 449 € <span class="font-normal text-white/50">/ noche</span></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería -->
+    <section id="galeria" class="py-20 sm:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 class="font-display text-center text-4xl font-semibold text-ink-900 sm:text-5xl">Momentos en Marina Vista</h2>
+        <div class="mt-12 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
+          <img
+            src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80"
+            alt="Lobby del hotel con iluminación cálida"
+            class="col-span-2 row-span-2 h-full min-h-[220px] w-full rounded-2xl object-cover md:min-h-[320px]"
+            loading="lazy"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=400&q=80"
+            alt="Desayuno buffet con fruta fresca"
+            class="h-40 w-full rounded-2xl object-cover md:h-auto"
+            loading="lazy"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=400&q=80"
+            alt="Tratamiento de spa con velas"
+            class="h-40 w-full rounded-2xl object-cover md:h-auto"
+            loading="lazy"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1520250497591-112f2c40a3f4?auto=format&fit=crop&w=600&q=80"
+            alt="Terraza con tumbonas y palmeras"
+            class="col-span-2 h-48 w-full rounded-2xl object-cover md:h-56"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="border-y border-sand-200 bg-sand-100 py-20">
+      <div class="mx-auto max-w-3xl px-4 text-center sm:px-6">
+        <blockquote class="font-display text-3xl font-medium italic leading-snug text-ink-900 sm:text-4xl">
+          “El mejor fin de semana del año. Silencio, olor a sal y un equipo que anticipa cada necesidad.”
+        </blockquote>
+        <p class="mt-6 text-sm font-medium uppercase tracking-widest text-ink-700/60">
+          — Laura M., huésped verificado · Booking 9,4
+        </p>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <footer id="contacto" class="bg-ink-900 py-16 text-white">
+      <div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
+        <div>
+          <p class="font-display text-2xl font-semibold">Marina Vista</p>
+          <p class="mt-4 text-sm leading-relaxed text-white/65">
+            Av. del Mediterráneo, 12<br />
+            03730 Jávea, Alicante<br />
+            España
+          </p>
+        </div>
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wider text-accent-light">Contacto</p>
+          <ul class="mt-4 space-y-2 text-sm text-white/75">
+            <li><a href="tel:+34966123456" class="hover:text-white">+34 966 123 456</a></li>
+            <li><a href="mailto:reservas@marinavista.example" class="hover:text-white">reservas@marinavista.example</a></li>
+            <li>Recepción 24 horas</li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wider text-accent-light">Newsletter</p>
+          <form class="mt-4 flex gap-2" action="#" method="post">
+            <label for="email-news" class="sr-only">Correo electrónico</label>
+            <input
+              type="email"
+              id="email-news"
+              name="email"
+              placeholder="tu@email.com"
+              class="min-w-0 flex-1 rounded-lg border border-white/20 bg-white/10 px-4 py-2.5 text-sm placeholder:text-white/40 focus:border-accent focus:outline-none"
+            />
+            <button
+              type="submit"
+              class="shrink-0 rounded-lg bg-accent px-4 py-2.5 text-sm font-semibold text-ink-900 hover:bg-accent-light"
+            >
+              Enviar
+            </button>
+          </form>
+        </div>
+      </div>
+      <p class="mx-auto mt-12 max-w-7xl border-t border-white/10 px-4 pt-8 text-center text-xs text-white/40 sm:px-6 lg:px-8">
+        © 2026 Marina Vista Hotel. Demostración HTML + Tailwind CSS.
+      </p>
+    </footer>
+  </body>
+</html>
